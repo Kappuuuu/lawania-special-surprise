@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Lawania ❤️</title>
+<title>Happy Birthday My Wife ❤️</title>
 
 <style>
 * {
@@ -15,14 +15,21 @@
 
 body {
   font-family: Georgia, serif;
-  background: linear-gradient(160deg, #190817, #42132f, #170c20);
+  background: linear-gradient(160deg,#16091e,#48132f,#180c28);
   color: white;
   text-align: center;
   overflow-x: hidden;
 }
 
 header {
+  min-height: 90vh;
   padding: 65px 18px 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .tag {
@@ -33,29 +40,24 @@ header {
 
 h1 {
   color: #ffb5d1;
-  font-size: clamp(35px, 9vw, 55px);
+  font-size: clamp(38px,9vw,58px);
   margin: 25px 0;
   text-shadow: 0 0 25px #ff4e91;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  to { text-shadow: 0 0 40px #ff4e91,0 0 70px #ff83ad; }
 }
 
 .subtitle {
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 17px;
+  line-height: 1.9;
   color: #ffe0ec;
 }
 
-.heart {
-  font-size: 65px;
-  margin: 25px;
-  animation: beat 1s infinite;
-}
-
-@keyframes beat {
-  50% { transform: scale(1.25); }
-}
-
 button {
-  background: linear-gradient(45deg, #ff397e, #ff83ad);
+  background: linear-gradient(45deg,#ff397e,#ff83ad);
   color: white;
   border: none;
   padding: 15px 28px;
@@ -66,8 +68,115 @@ button {
   box-shadow: 0 5px 25px #ff397e66;
 }
 
+.heart {
+  font-size: 65px;
+  animation: heartbeat 1s infinite;
+  margin: 20px;
+}
+
+@keyframes heartbeat {
+  50% { transform: scale(1.3); }
+}
+
+/* ANIME COUPLE */
+
+.anime-scene {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 12px;
+  height: 180px;
+  margin: 25px auto;
+}
+
+.character {
+  width: 105px;
+  height: 145px;
+  position: relative;
+  animation: animeFloat 2s infinite ease-in-out;
+}
+
+.character:nth-child(2) {
+  animation-delay: .5s;
+}
+
+@keyframes animeFloat {
+  50% { transform: translateY(-12px); }
+}
+
+.head {
+  width: 76px;
+  height: 83px;
+  border-radius: 45% 45% 48% 48%;
+  background: #ffd1b8;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  border: 2px solid #fff2;
+}
+
+.hair {
+  position: absolute;
+  top: -8px;
+  left: -3px;
+  width: 82px;
+  height: 38px;
+  border-radius: 50% 50% 20% 20%;
+  background: #352039;
+  z-index: 3;
+}
+
+.character.girl .hair {
+  background: #8e285e;
+  height: 48px;
+}
+
+.eye {
+  position: absolute;
+  top: 36px;
+  left: 17px;
+  width: 9px;
+  height: 14px;
+  background: #38223b;
+  border-radius: 50%;
+}
+
+.eye.right {
+  left: 49px;
+}
+
+.smile {
+  position: absolute;
+  top: 58px;
+  left: 31px;
+  width: 15px;
+  height: 8px;
+  border-bottom: 2px solid #c94f69;
+  border-radius: 50%;
+}
+
+.body {
+  width: 78px;
+  height: 60px;
+  margin: -3px auto;
+  border-radius: 25px 25px 8px 8px;
+  background: #5378c9;
+}
+
+.girl .body {
+  background: #ed639c;
+}
+
+.anime-caption {
+  color: #ffb5d1;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+/* SECTIONS */
+
 section {
-  padding: 45px 18px;
+  padding: 48px 18px;
 }
 
 h2 {
@@ -88,9 +197,40 @@ h2 {
   padding: 25px;
 }
 
+/* LOVE ANIMATION */
+
+.love-scene {
+  min-height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.big-love {
+  font-size: 90px;
+  animation: heartbeat 1.2s infinite;
+  filter: drop-shadow(0 0 20px #ff3985);
+}
+
+.love-word {
+  position: absolute;
+  color: #ffb5d1;
+  font-size: 20px;
+  animation: loveUp 3s infinite;
+}
+
+@keyframes loveUp {
+  0% { transform: translateY(50px); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-70px); opacity: 0; }
+}
+
+/* GALLERY */
+
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2,minmax(0,1fr));
   gap: 12px;
   max-width: 650px;
   margin: auto;
@@ -104,17 +244,11 @@ h2 {
   border: 2px solid #ff9cbe;
   box-shadow: 0 5px 20px #0008;
   cursor: pointer;
-  transition: transform .3s;
+  transition: .3s;
 }
 
 .gallery img:hover {
-  transform: scale(1.04);
-}
-
-.gallery img:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  width: 70%;
-  justify-self: center;
+  transform: scale(1.04) rotate(1deg);
 }
 
 #viewer {
@@ -139,9 +273,27 @@ h2 {
   top: 20px;
   right: 25px;
   font-size: 35px;
-  color: white;
   cursor: pointer;
 }
+
+/* FALLING FLOWERS AND HEARTS */
+
+.fall {
+  position: fixed;
+  top: -35px;
+  animation: fallDown linear forwards;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes fallDown {
+  to {
+    transform: translateY(110vh) rotate(540deg);
+    opacity: .1;
+  }
+}
+
+/* FINAL */
 
 .final {
   padding: 65px 20px;
@@ -149,7 +301,7 @@ h2 {
 }
 
 .final h2 {
-  font-size: 34px;
+  font-size: 35px;
 }
 
 footer {
@@ -157,21 +309,7 @@ footer {
   color: #ffb5d1;
 }
 
-.float {
-  position: fixed;
-  top: -30px;
-  animation: fall 8s linear infinite;
-  pointer-events: none;
-  z-index: 2;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-  }
-}
-
-@media(max-width: 380px) {
+@media(max-width:380px) {
   .gallery img { height: 175px; }
 }
 </style>
@@ -180,22 +318,58 @@ footer {
 <body>
 
 <header>
-  <div class="tag">A SPECIAL DAY FOR SOMEONE SPECIAL</div>
+
+  <div class="tag">A LOVE STORY FOREVER ❤️</div>
+
   <div class="heart">❤️</div>
-  <h1>Happy Birthday<br>Lawania!</h1>
+
+  <h1>Happy Birthday<br>My Wife!</h1>
+
   <p class="subtitle">
-    To the most beautiful part of my life 🌹<br>
-    Today is all about YOU!
+    To my favourite person in the universe 🌹<br>
+    You are my today and all my tomorrows.
   </p>
+
+  <div class="anime-scene">
+
+    <div class="character">
+      <div class="head">
+        <div class="hair"></div>
+        <div class="eye"></div>
+        <div class="eye right"></div>
+        <div class="smile"></div>
+      </div>
+      <div class="body"></div>
+    </div>
+
+    <div class="character girl">
+      <div class="head">
+        <div class="hair"></div>
+        <div class="eye"></div>
+        <div class="eye right"></div>
+        <div class="smile"></div>
+      </div>
+      <div class="body"></div>
+    </div>
+
+  </div>
+
+  <p class="anime-caption">
+    Two hearts, one forever 💕
+  </p>
+
   <button onclick="document.getElementById('love').scrollIntoView({behavior:'smooth'})">
     Open Your Surprise 💝
   </button>
+
 </header>
 
 <section id="love">
+
   <h2>My Love Letter 💌</h2>
+
   <div class="message">
-    My Dear Lawania ❤️<br><br>
+    My Dear Wife ❤️<br><br>
 
     You are the most beautiful gift life has given me.
     Your smile makes my days brighter, and your love
@@ -209,29 +383,48 @@ footer {
 
     I love you more than words can ever explain. ❤️
   </div>
+
 </section>
 
 <section>
+
+  <h2>My Heart Belongs To You 💗</h2>
+
+  <div class="love-scene">
+    <div class="big-love">💖</div>
+    <div class="love-word">I Love You ❤️</div>
+  </div>
+
+  <p class="subtitle">
+    In every universe, I would choose you again. ✨
+  </p>
+
+</section>
+
+<section>
+
   <h2>Our Beautiful Memories 📸</h2>
+
   <p class="subtitle" style="margin-bottom:25px">
     Every picture holds a special memory ❤️
   </p>
 
   <div class="gallery">
 
-    <img src="Snapchat-1015828381.jpg" alt="Our memory 1" onclick="show(this)">
-    <img src="Snapchat-1097512383.jpg" alt="Our memory 2" onclick="show(this)">
-    <img src="Snapchat-1098653693.jpg" alt="Our memory 3" onclick="show(this)">
-    <img src="Snapchat-1204422887.jpg" alt="Our memory 4" onclick="show(this)">
-    <img src="Snapchat-132161883.jpg" alt="Our memory 5" onclick="show(this)">
-    <img src="Snapchat-1392645630.jpg" alt="Our memory 6" onclick="show(this)">
-    <img src="Snapchat-1410183377.jpg" alt="Our memory 7" onclick="show(this)">
-    <img src="Snapchat-1531613918.jpg" alt="Our memory 8" onclick="show(this)">
-    <img src="Snapchat-76443071.jpg" alt="Our memory 9" onclick="show(this)">
-    <img src="Snapchat-845155939.jpg" alt="Our memory 10" onclick="show(this)">
-    <img src="Snapchat-958478409.jpg" alt="Our memory 11" onclick="show(this)">
+    <img src="Snapchat-1015828381.jpg" alt="Memory 1" onclick="show(this)">
+    <img src="Snapchat-1097512383.jpg" alt="Memory 2" onclick="show(this)">
+    <img src="Snapchat-1098653693.jpg" alt="Memory 3" onclick="show(this)">
+    <img src="Snapchat-1204422887.jpg" alt="Memory 4" onclick="show(this)">
+    <img src="Snapchat-132161883.jpg" alt="Memory 5" onclick="show(this)">
+    <img src="Snapchat-1392645630.jpg" alt="Memory 6" onclick="show(this)">
+    <img src="Snapchat-1410183377.jpg" alt="Memory 7" onclick="show(this)">
+    <img src="Snapchat-1531613918.jpg" alt="Memory 8" onclick="show(this)">
+    <img src="Snapchat-76443071.jpg" alt="Memory 9" onclick="show(this)">
+    <img src="Snapchat-845155939.jpg" alt="Memory 10" onclick="show(this)">
+    <img src="Snapchat-958478409.jpg" alt="Memory 11" onclick="show(this)">
 
   </div>
+
 </section>
 
 <div id="viewer" onclick="hide()">
@@ -240,21 +433,32 @@ footer {
 </div>
 
 <section class="final">
+
   <div class="heart">💗</div>
+
   <h2>You're My Forever!</h2>
+
   <p class="subtitle">
     One birthday, a thousand wishes,<br>
     and a lifetime of love.<br><br>
-    Happy Birthday, Lawania! 🌹<br><br>
+
+    Happy Birthday, My Wife! 🌹<br><br>
+
     Forever Yours ❤️
   </p>
+
+  <div class="anime-caption">
+    Our love story has no ending. 💕
+  </div>
+
 </section>
 
 <footer>
-  Made with ❤️ just for Lawania
+  Made with endless love ❤️ Just for My Wife
 </footer>
 
 <script>
+
 function show(img) {
   document.getElementById("largeImage").src = img.src;
   document.getElementById("viewer").style.display = "flex";
@@ -264,19 +468,26 @@ function hide() {
   document.getElementById("viewer").style.display = "none";
 }
 
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.className = "float";
-  heart.innerHTML = Math.random() > 0.5 ? "❤️" : "🌸";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.fontSize = (15 + Math.random() * 20) + "px";
-  heart.style.animationDuration = (5 + Math.random() * 5) + "s";
-  document.body.appendChild(heart);
+function createFallingEffect() {
 
-  setTimeout(() => heart.remove(), 10000);
+  const items = ["❤️","💕","🌸","✨","💗","🌹"];
+
+  const item = document.createElement("div");
+
+  item.className = "fall";
+  item.innerHTML = items[Math.floor(Math.random()*items.length)];
+
+  item.style.left = Math.random()*100 + "vw";
+  item.style.fontSize = (15 + Math.random()*20) + "px";
+  item.style.animationDuration = (5 + Math.random()*5) + "s";
+
+  document.body.appendChild(item);
+
+  setTimeout(() => item.remove(),10000);
 }
 
-setInterval(createHeart, 700);
+setInterval(createFallingEffect,500);
+
 </script>
 
 </body>
