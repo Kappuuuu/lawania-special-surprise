@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Lawania ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #fff0f5;
+  color: #71364e;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 100vh;
+  padding: 65px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: clamp(35px, 9vw, 55px);
+  color: #d63384;
+  margin: 20px 0;
+}
+
+h2 {
+  color: #c44579;
+  margin-bottom: 22px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+button {
+  background: linear-gradient(135deg, #ff5b98, #c72c78);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 35px;
+  font-size: 17px;
+  margin: 25px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px #e88aaa66;
+}
+
+button:active {
+  transform: scale(.96);
+}
+
+.hero {
+  background: linear-gradient(145deg, #ffe0ec, #fff7fa, #ffd2e3);
+}
+
+.heart {
+  font-size: 65px;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.2); }
+}
+
+.gallery {
+  background: #fff8fb;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 650px;
+  margin-top: 25px;
+}
+
+.photos img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 7px solid white;
+  border-radius: 8px;
+  box-shadow: 0 5px 18px #b85b8050;
+  transform: rotate(-2deg);
+}
+
+.photos img:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.letter {
+  background: #ffe8f0;
+}
+
+.paper {
+  background: white;
+  border-radius: 18px;
+  padding: 30px 22px;
+  max-width: 600px;
+  box-shadow: 0 8px 30px #b85b8025;
+}
+
+.final {
+  background: linear-gradient(145deg, #ffd5e5, #fff0f5);
+}
+
+footer {
+  padding: 20px;
+  background: #c72c78;
+  color: white;
+}
+
+.floating {
+  position: fixed;
+  bottom: -30px;
+  animation: floatUp 7s linear infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="heart">❤️</div>
+  <p>A little surprise made with all my love...</p>
+  <h1>Happy Birthday<br>My Lawania!</h1>
+  <p>To my beautiful wife, my happiness and my forever love.</p>
+  <button onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">
+    Open Your Surprise 💝
+  </button>
+</section>
+
+<section class="gallery" id="memories">
+  <h1>Our Beautiful Memories 🌷</h1>
+  <p>Every picture holds a special little piece of my heart.</p>
+
+  <div class="photos">
+    <img src="photos/photo1.jpg" alt="Memory 1">
+    <img src="photos/photo2.jpg" alt="Memory 2">
+    <img src="photos/photo3.jpg" alt="Memory 3">
+    <img src="photos/photo4.jpg" alt="Memory 4">
+    <img src="photos/photo5.jpg" alt="Memory 5">
+    <img src="photos/photo6.jpg" alt="Memory 6">
+    <img src="photos/photo7.jpg" alt="Memory 7">
+    <img src="photos/photo8.jpg" alt="Memory 8">
+    <img src="photos/photo9.jpg" alt="Memory 9">
+    <img src="photos/photo10.jpg" alt="Memory 10">
+    <img src="photos/photo11.jpg" alt="Memory 11">
+  </div>
+</section>
+
+<section class="letter">
+  <h1>A Letter For You 💌</h1>
+  <div class="paper">
+    <h2>My Dearest Lawania ❤️</h2>
+    <p>
+      Happy Birthday, my love!
+      <br><br>
+      You are one of the most beautiful blessings
+      in my life. Your smile makes my days brighter
+      and your presence makes my world complete.
+      <br><br>
+      I wish you endless happiness, beautiful
+      memories and all the love your heart can hold.
+      <br><br>
+      No matter what life brings, I want to keep
+      choosing you, loving you and making memories
+      with you.
+      <br><br>
+      Forever yours. ❤️
+    </p>
+  </div>
+</section>
+
+<section class="final">
+  <div class="heart">💖</div>
+  <h1>You're My Forever!</h1>
+  <p>
+    One birthday, a thousand wishes,
+    and a lifetime of love.
+    <br><br>
+    Happy Birthday, Lawania! 🌹
+  </p>
+  <button onclick="celebrate()">One More Surprise 🎉</button>
+  <h2 id="surprise"></h2>
+</section>
+
+<footer>
+  Made with endless love ❤️<br>
+  For My Beautiful Wife, Lawania
+</footer>
+
+<script>
+function celebrate() {
+  document.getElementById("surprise").innerHTML =
+    "I LOVE YOU FOREVER, LAWANIA! ❤️🥰🎂";
+  for (let i = 0; i < 25; i++) {
+    let heart = document.createElement("div");
+    heart.className = "floating";
+    heart.innerHTML = ["❤️","💖","💕","✨","🌸"][i % 5];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 8000);
+  }
+}
+</script>
+
+</body>
+</html>
