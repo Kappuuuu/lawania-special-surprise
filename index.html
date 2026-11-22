@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Lawania ❤️</title>
+<title>Happy Birthday Lawania ❤️</title>
 
 <style>
 * {
@@ -13,343 +13,270 @@
   box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
-
 body {
   font-family: Georgia, serif;
-  background: #fff3f7;
-  color: #74354f;
+  background: linear-gradient(160deg, #190817, #42132f, #170c20);
+  color: white;
+  text-align: center;
   overflow-x: hidden;
 }
 
-section {
-  min-height: 100vh;
-  padding: 65px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+header {
+  padding: 65px 18px 45px;
 }
 
-.hero {
-  background: linear-gradient(145deg,#ffd6e5,#fff5f9,#ffc4dc);
+.tag {
+  color: #ffb4d1;
+  letter-spacing: 4px;
+  font-size: 12px;
 }
 
 h1 {
-  color: #c72c78;
-  font-size: clamp(38px,9vw,65px);
-  margin: 20px 0;
+  color: #ffb5d1;
+  font-size: clamp(35px, 9vw, 55px);
+  margin: 25px 0;
+  text-shadow: 0 0 25px #ff4e91;
 }
 
-h2 {
-  color: #c72c78;
-  margin-bottom: 18px;
-}
-
-p {
+.subtitle {
   font-size: 18px;
   line-height: 1.8;
-  max-width: 650px;
+  color: #ffe0ec;
 }
 
 .heart {
-  font-size: 75px;
-  animation: heartbeat 1.2s infinite;
+  font-size: 65px;
+  margin: 25px;
+  animation: beat 1s infinite;
 }
 
-@keyframes heartbeat {
-  50% { transform: scale(1.2); }
+@keyframes beat {
+  50% { transform: scale(1.25); }
 }
 
 button {
-  border: none;
-  border-radius: 40px;
-  padding: 16px 30px;
-  margin: 25px 0;
-  background: linear-gradient(135deg,#ff5597,#c72c78);
+  background: linear-gradient(45deg, #ff397e, #ff83ad);
   color: white;
-  font-size: 17px;
-  font-weight: bold;
-  box-shadow: 0 7px 22px #d85b8c55;
+  border: none;
+  padding: 15px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  margin: 25px 0;
   cursor: pointer;
+  box-shadow: 0 5px 25px #ff397e66;
 }
 
-button:active {
-  transform: scale(.95);
+section {
+  padding: 45px 18px;
+}
+
+h2 {
+  color: #ffb5d1;
+  font-size: 29px;
+  margin-bottom: 22px;
+}
+
+.message {
+  max-width: 550px;
+  margin: auto;
+  line-height: 1.9;
+  font-size: 17px;
+  color: #ffe1ed;
+  background: #ffffff12;
+  border: 1px solid #ff91b755;
+  border-radius: 20px;
+  padding: 25px;
 }
 
 .gallery {
-  background: #fff8fb;
-}
-
-.photos {
   display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 16px;
-  width: 100%;
-  max-width: 700px;
-  margin-top: 30px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 650px;
+  margin: auto;
 }
 
-.photos img {
+.gallery img {
   width: 100%;
-  aspect-ratio: 1;
+  height: 220px;
   object-fit: cover;
-  border: 7px solid white;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px #a64e7130;
+  border-radius: 15px;
+  border: 2px solid #ff9cbe;
+  box-shadow: 0 5px 20px #0008;
+  cursor: pointer;
   transition: transform .3s;
 }
 
-.photos img:nth-child(odd) {
-  transform: rotate(-2deg);
+.gallery img:hover {
+  transform: scale(1.04);
 }
 
-.photos img:nth-child(even) {
-  transform: rotate(2deg);
+.gallery img:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: 70%;
+  justify-self: center;
 }
 
-.photos img:active {
-  transform: scale(1.05);
+#viewer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #000e;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 
-.caption {
-  margin-top: 25px;
-  font-style: italic;
+#viewer img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 15px;
 }
 
-.letter {
-  background: linear-gradient(135deg,#ffe5ef,#fff5f9);
-}
-
-.paper {
-  background: white;
-  max-width: 620px;
-  width: 100%;
-  padding: 35px 25px;
-  border-radius: 18px;
-  box-shadow: 0 8px 30px #ad527530;
-  line-height: 2;
-}
-
-.paper p {
-  font-size: 18px;
+.close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
 }
 
 .final {
-  background: linear-gradient(145deg,#ffd3e4,#fff0f6,#ffc5dc);
+  padding: 65px 20px;
+  background: #ffffff0c;
+}
+
+.final h2 {
+  font-size: 34px;
 }
 
 footer {
-  background: #bd286e;
-  color: white;
-  text-align: center;
   padding: 25px;
-  line-height: 2;
+  color: #ffb5d1;
 }
 
-.floating {
+.float {
   position: fixed;
-  bottom: -40px;
-  z-index: 10;
+  top: -30px;
+  animation: fall 8s linear infinite;
   pointer-events: none;
-  animation: rise 6s linear forwards;
+  z-index: 2;
 }
 
-@keyframes rise {
+@keyframes fall {
   to {
-    transform: translateY(-110vh) rotate(360deg);
-    opacity: 0;
+    transform: translateY(110vh) rotate(360deg);
   }
 }
 
-@media(max-width:350px) {
-  .photos { gap: 9px; }
-  section { padding: 45px 14px; }
+@media(max-width: 380px) {
+  .gallery img { height: 175px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- WELCOME -->
-
-<section class="hero">
+<header>
+  <div class="tag">A SPECIAL DAY FOR SOMEONE SPECIAL</div>
   <div class="heart">❤️</div>
-
-  <p>A little surprise made with endless love...</p>
-
-  <h1>Happy Birthday<br>My Lawania!</h1>
-
-  <p>
-    To my beautiful wife,
-    my happiness and my forever love.
+  <h1>Happy Birthday<br>Lawania!</h1>
+  <p class="subtitle">
+    To the most beautiful part of my life 🌹<br>
+    Today is all about YOU!
   </p>
-
-  <button onclick="goToMemories()">
+  <button onclick="document.getElementById('love').scrollIntoView({behavior:'smooth'})">
     Open Your Surprise 💝
   </button>
+</header>
 
-  <p>Scroll down for more magic ✨</p>
+<section id="love">
+  <h2>My Love Letter 💌</h2>
+  <div class="message">
+    My Dear Lawania ❤️<br><br>
+
+    You are the most beautiful gift life has given me.
+    Your smile makes my days brighter, and your love
+    makes my world complete.<br><br>
+
+    I wish you endless happiness, beautiful memories,
+    success and all the love your heart can hold.<br><br>
+
+    Thank you for being you. I am lucky to have you
+    in my life.<br><br>
+
+    I love you more than words can ever explain. ❤️
+  </div>
 </section>
 
-<!-- PHOTO GALLERY -->
-
-<section class="gallery" id="memories">
-
-  <h1>Our Memories 🌷</h1>
-
-  <p>
-    Every picture is a beautiful memory.
-    Every memory is a reason to smile.
+<section>
+  <h2>Our Beautiful Memories 📸</h2>
+  <p class="subtitle" style="margin-bottom:25px">
+    Every picture holds a special memory ❤️
   </p>
 
-  <div class="photos">
+  <div class="gallery">
 
-    <img src="https://raw.githubusercontent.com/kappuuuuu/lawania-birthday/main/Snapchat-1015828381.jpg" alt="Our memory 1">
-
-    <img src="https://raw.githubusercontent.com/kappuuuuu/lawania-birthday/main/Snapchat-1097512383.jpg" alt="Our memory 2">
-
-    <img src="https://raw.githubusercontent.com/kappuuuuu/lawania-birthday/main/Snapchat-1098653693.jpg" alt="Our memory 3">
-
-    <img src="https://raw.githubusercontent.com/kappuuuuu/lawania-birthday/main/Snapchat-1204422887.jpg" alt="Our memory 4">
-
-    <img src="https://raw.githubusercontent.com/kappuuuuu/lawania-birthday/main/Snapchat-132161883.jpg" alt="Our memory 5">
-
-    <img src="https://raw.githubusercontent.com/kappuuuuu/lawania-birthday/main/Snapchat-1392645630.jpg" alt="Our memory 6">
-
-    <img src="https://raw.githubusercontent.com/kappuuuuu/lawania-birthday/main/Snapchat-1410183377.jpg" alt="Our memory 7">
-
-    <img src="https://raw.githubusercontent.com/kappuuuuu/lawania-birthday/main/Snapchat-1531613918.jpg" alt="Our memory 8">
-
-    <img src="https://raw.githubusercontent.com/kappuuuuu/lawania-birthday/main/Snapchat-76443071.jpg" alt="Our memory 9">
-
-    <img src="https://raw.githubusercontent.com/kappuuuuu/lawania-birthday/main/Snapchat-845155939.jpg" alt="Our memory 10">
-
-    <img src="https://raw.githubusercontent.com/kappuuuuu/lawania-birthday/main/Snapchat-958478409.jpg" alt="Our memory 11">
+    <img src="Snapchat-1015828381.jpg" alt="Our memory 1" onclick="show(this)">
+    <img src="Snapchat-1097512383.jpg" alt="Our memory 2" onclick="show(this)">
+    <img src="Snapchat-1098653693.jpg" alt="Our memory 3" onclick="show(this)">
+    <img src="Snapchat-1204422887.jpg" alt="Our memory 4" onclick="show(this)">
+    <img src="Snapchat-132161883.jpg" alt="Our memory 5" onclick="show(this)">
+    <img src="Snapchat-1392645630.jpg" alt="Our memory 6" onclick="show(this)">
+    <img src="Snapchat-1410183377.jpg" alt="Our memory 7" onclick="show(this)">
+    <img src="Snapchat-1531613918.jpg" alt="Our memory 8" onclick="show(this)">
+    <img src="Snapchat-76443071.jpg" alt="Our memory 9" onclick="show(this)">
+    <img src="Snapchat-845155939.jpg" alt="Our memory 10" onclick="show(this)">
+    <img src="Snapchat-958478409.jpg" alt="Our memory 11" onclick="show(this)">
 
   </div>
-
-  <p class="caption">
-    My favourite memories are the ones with you. ❤️
-  </p>
-
 </section>
 
-<!-- LOVE LETTER -->
-
-<section class="letter">
-
-  <h1>A Letter For You 💌</h1>
-
-  <div class="paper">
-
-    <h2>My Dearest Lawania ❤️</h2>
-
-    <p id="typing"></p>
-
-  </div>
-
-</section>
-
-<!-- FINAL SURPRISE -->
+<div id="viewer" onclick="hide()">
+  <span class="close">&times;</span>
+  <img id="largeImage" src="" alt="Memory">
+</div>
 
 <section class="final">
-
-  <div class="heart">💖</div>
-
-  <h1>You're My Forever!</h1>
-
-  <p>
-    One birthday, a thousand wishes,
-    and a lifetime of love.
+  <div class="heart">💗</div>
+  <h2>You're My Forever!</h2>
+  <p class="subtitle">
+    One birthday, a thousand wishes,<br>
+    and a lifetime of love.<br><br>
+    Happy Birthday, Lawania! 🌹<br><br>
+    Forever Yours ❤️
   </p>
-
-  <button onclick="finalSurprise()">
-    One Last Surprise 🎁
-  </button>
-
-  <h2 id="message"></h2>
-
 </section>
 
 <footer>
-  Made with endless love ❤️
-  <br>
-  For My Beautiful Wife, Lawania 🌹
+  Made with ❤️ just for Lawania
 </footer>
 
 <script>
-
-function goToMemories() {
-  document.getElementById("memories")
-    .scrollIntoView({behavior:"smooth"});
+function show(img) {
+  document.getElementById("largeImage").src = img.src;
+  document.getElementById("viewer").style.display = "flex";
 }
 
-const letter =
-"My beautiful Lawania ❤️\n\n" +
-"Happy Birthday, my love!\n\n" +
-"You are one of the most beautiful blessings in my life. " +
-"Your smile makes my days brighter and your presence makes my world complete.\n\n" +
-"I wish you endless happiness, beautiful memories and all the love your heart can hold.\n\n" +
-"No matter what life brings, I will always choose you, love you and stand beside you.\n\n" +
-"You are my today, my tomorrow and my forever.\n\n" +
-"Forever yours. ❤️";
-
-let position = 0;
-
-function typeLetter() {
-  const element = document.getElementById("typing");
-
-  if(position < letter.length) {
-    const char = letter.charAt(position);
-
-    element.innerHTML += char === "\n" ? "<br>" : char;
-
-    position++;
-    setTimeout(typeLetter, 45);
-  }
+function hide() {
+  document.getElementById("viewer").style.display = "none";
 }
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting && position === 0) {
-      typeLetter();
-    }
-  });
-});
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "float";
+  heart.innerHTML = Math.random() > 0.5 ? "❤️" : "🌸";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (15 + Math.random() * 20) + "px";
+  heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+  document.body.appendChild(heart);
 
-observer.observe(document.querySelector(".letter"));
-
-function finalSurprise() {
-
-  document.getElementById("message").innerHTML =
-    "I LOVE YOU FOREVER, LAWANIA! ❤️🥰🎂";
-
-  for(let i=0; i<45; i++) {
-
-    const heart = document.createElement("div");
-
-    heart.className = "floating";
-
-    heart.innerHTML =
-      ["❤️","💕","💖","✨","🌸","💗"][i % 6];
-
-    heart.style.left = Math.random()*100 + "vw";
-
-    heart.style.fontSize =
-      (20 + Math.random()*25) + "px";
-
-    heart.style.animationDuration =
-      (4 + Math.random()*4) + "s";
-
-    document.body.appendChild(heart);
-
-    setTimeout(() => heart.remove(),8000);
-  }
+  setTimeout(() => heart.remove(), 10000);
 }
 
+setInterval(createHeart, 700);
 </script>
 
 </body>
